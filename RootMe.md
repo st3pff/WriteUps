@@ -32,48 +32,18 @@ j'ai décidé d'uploader un fichier vide nommé test.gif afin de voir comment é
 **Exemple  de requète POST après avoir été capturé dans Burp Suite:**
 ![Dashboardburpsuite](./assets/Dashboardburpsuite.jpg)
 ![requète POST](./assets/requetePOST.jpg)
-```
-Host: challenge01.root-me.org
 
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Dans la documentation on nous explique qu'il est facilement possible de contourner la vérification MIME. Seul l'extension du fichier est vérifié mais pas le contenue. Il est donc possible de copier du code php ou python et de l'injecté avec "Burp suite".
 
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Pour ce faire, on va utiliser la requète POST récupéré dans le Dashboard et utiliser la fonction repeater de Burp Suite.
 
-Accept-Language: en-US,en;q=0.5
-
-Accept-Encoding: gzip, deflate, br
-
-Content-Type: multipart/form-data; boundary=---------------------------7953439253655482311709021686
-
-Content-Length: 220
-
-Origin: http://challenge01.root-me.org
-
-Connection: close
-
-Referer: http://challenge01.root-me.org/web-serveur/ch21/?action=upload
-
-Cookie: PHPSESSID=50b7b78eb6d9e9c304557f2d66ebbad8; _ga_SRYSKX09J7=GS1.1.1721738360.4.1.1721739170.0.0.0; _ga=GA1.1.1550943214.1721718478
-
-Upgrade-Insecure-Requests: 1
+effectuer un clic droit la requète POST et sélectionner send to the repeater.
 
 
 
------------------------------7953439253655482311709021686
-
-Content-Disposition: form-data; name="file"; filename="test.gif"
-
-Content-Type: image/gif
 
 
 
-test
-
-
------------------------------7953439253655482311709021686--
-```
-
-Dans la documentation on nous explique qu'il est facilement possible de contourner la vérification MIME. Est vérifie l'extension mais pas le contenue. Il est donc possible de copier du code php ou python et de l'injecté avec "Burp suite".
 
 On peut utiliser:
 ```
