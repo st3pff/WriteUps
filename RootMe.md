@@ -60,7 +60,7 @@ open_basedir	/challenge/web-serveur/ch21
 ![phpinfo](./assets/phpinfo.jpg)
 ATTENTION! Il est obligatoire de changer le nom du fichier à chaque nouvelle requète envoyée. ici en l'occurance test.gif à été renomé en phpinfo.php, bien vérifier de mettre l'extension .php afin de pouvoir éxécuter le code.
 
-Ne pas oublier une fois le code écrit de cliquer sur "Send" pour envoyer l'attaque au serveur. (icon en orange en haut à gauche de l'écran)
+Ne pas oublier une fois le code écrit de cliquer sur "Send" pour envoyer l'attaque au serveur. (icone en orange en haut à gauche de l'écran)
 
 **Etape 3 :**
 
