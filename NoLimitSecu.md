@@ -45,9 +45,13 @@ GDPR, ISO 27001, etc.
 ## Outils et Technologies qui sont utilisés
 
 **Nmap :** Utilisé pour la découverte de réseau et les audits de sécurité. Il aide à identifier les ports ouverts et les services en cours d'exécution.
+
 **Metasploit** : Un outil de test d'intrusion qui permet aux testeurs de sécurité de rechercher, vérifier et exploiter les vulnérabilités.
+
 **OpenVAS** : Une solution open-source pour les analyses de vulnérabilités et la gestion des vulnérabilités.
-**# Wireshark :** Un analyseur de protocole réseau qui permet de capturer et d'inspecter les données traversant le réseau.
+
+**Wireshark :** Un analyseur de protocole réseau qui permet de capturer et d'inspecter les données traversant le réseau.
+
 **Nessus :** Un autre outil d'analyse de vulnérabilités très utilisé pour identifier les faiblesses de sécurité dans les systèmes d'un tiers.
 
 ## Techniques Complémentaires
