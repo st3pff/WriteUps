@@ -12,13 +12,13 @@ Writeups:
 
 En lisant le pdf fournit par le challenge root me, on nous explique que fournir une fonction de téléchargement de fichiers sans ouvrir de failles de sécurité s'est avéré être un véritable défi dans les applications Web PHP.
 
-Dans un premier temps j'ai donc essayé d'uploader un shell.php proposer par p0wny-shell.
+j'ai donc essayé d'uploader un shell.php proposer par p0wny-shell disponible sur le web.
 
 via l'url http://challenge01.root-me.org/web-serveur/ch21/?galerie=pirate 
 
-On constate que les seul fichier authorisés à être uploder sont les .gif .png .jpg
+On constate que les seul fichier authorisés à être uplodé sont les .gif .png .jpg
 
-J'ai donc essayé d'uploader le shell.php renomé en shell.php.gif
+J'ai donc essayé d'uploader le shell.php renommé en shell.php.gif
 ce qui n'a pas été concluant non plus car par la suite il m'était impossible de lire le code php.
 
 **Etape 2 :**
@@ -27,7 +27,7 @@ Je me suis renseigné sur comment exécuter des commandes en php et pouvoir inje
 
 Dans un premier temps j'ai configuré firefox en mode proxy pour que burp suite puisse fonctionner en écoute.
 
-j'ai décidé d'uploader un fichier vide nommé test.gif afin de voir comment était écrite la requète et récupéré dans Burp Suite.
+j'ai décidé d'uploader un fichier vide nommé test.gif afin de voir comment était écrite la requète en la récupérant dans Burp Suite.
 
 **Exemple  de requète POST après avoir été capturé dans Burp Suite:**
 ![Dashboardburpsuite](./assets/Dashboardburpsuite.jpg)
@@ -45,8 +45,7 @@ C'est à partir de l'onglet repeater que l'on va pouvoir copier du code php et l
 
 ![ongletrepetear](./assets/ongletreapter.jpg)
 
-La ou est écrit test sur l'image est l'endroit ou nous allons pouvoir écrire le code php, afin de lui faire exécuter les commandes que nous 
-souhaitons.
+La ou est écrit test sur l'image est l'endroit ou nous allons pouvoir écrire le code php, afin de lui faire exécuter les commandes que nous souhaitons.
 
 On peut utiliser par exemple:
 ```
@@ -67,15 +66,14 @@ Ne pas oublier une fois le code écrit de cliquer sur "Send" pour envoyer l'atta
 Au début dans le challenge on nous dit que le fichier contenant le mot de passe se trouve à la racine de l'application.
 
 
-
-
-
 En envoyant la requète avec la commande "ls -la" on connait ou on se trouve le fichier uploader et on peut donc faire un cat à la racine de l'application.
 
+```
 <?php
 // Executes, returns only last line of the output
 echo exec("ls -la");
 ?>
+```
 
 http://challenge01.root-me.org/web-serveur/ch21/galerie/upload/6d2f513e04f13e82d71dfa6a0884ce46//ls.php
 
