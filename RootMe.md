@@ -33,7 +33,7 @@ j'ai décidé d'uploader un fichier vide nommé test.gif afin de voir comment é
 ![Dashboardburpsuite](./assets/Dashboardburpsuite.jpg)
 ![requète POST](./assets/requetePOST.jpg)
 
-Dans la documentation on nous explique qu'il est facilement possible de contourner la vérification MIME. Seul l'extension du fichier est vérifié mais pas le contenue. Il est donc possible de copier du code php ou python et de l'injecté avec "Burp suite".
+Dans la documentation on nous explique qu'il est facilement possible de contourner la vérification MIME. Seul l'extension du fichier est vérifié mais pas le contenu. Il est donc possible de copier du code php ou python et de l'injecté avec "Burp suite".
 
 Pour ce faire, on va utiliser la requète POST récupéré dans le Dashboard et utiliser la fonction repeater de Burp Suite.
 
@@ -66,7 +66,8 @@ Ne pas oublier une fois le code écrit de cliquer sur "Send" pour envoyer l'atta
 Au début dans le challenge on nous dit que le fichier contenant le mot de passe se trouve à la racine de l'application.
 
 
-En envoyant la requète avec la commande "ls -la" on connait ou on se trouve le fichier uploader et on peut donc faire un cat à la racine de l'application.
+En envoyant la requète avec la commande "ls -la" on connait ou se trouve le fichier uploader et on peut donc faire un cat à la racine de l'application, sachant que l'application est ch21. Le chemin se trouve dans l'url challenge01.root-me.org/web-serveur/ch21/galerie/upload/6d2f513e04f13e82d71dfa6a0884ce46/ pour se retrouver à la racine il sufit de faire un retour en arrière de 3 répertoire. ../../../
+c'est pour cela que nous utilisons cette commande cat ../../../.passwd
 
 ```
 <?php
